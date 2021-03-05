@@ -1,0 +1,49 @@
+<div class="wrapper-container">
+  <div class="login-form">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title >
+          <div class="disp-flex jc-center login-header fs-16 B WD100">
+            GEMS Cloud Web Appliation
+          </div></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="loginForm" #setpasswordform="ngForm" (submit)="signInForm(setpasswordform)">
+          <div class="disp-flex flex-col">
+            <div class="user-name">
+              <mat-form-field appearance="fill">
+                <input matInput placeholder="Username" formControlName="userName">
+                <mat-icon matSuffix>account_circle</mat-icon>
+                <mat-hint>Enter Username here.</mat-hint>
+                <mat-error *ngFor="let error of error_messages.userName">
+                  <div class="error-message"
+                      *ngIf="loginForm.get('userName').hasError(error.type) && (loginForm.get('userName').dirty || loginForm.get('userName').touched)">
+                      {{ error.message }}
+                  </div>
+              </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="password MT16">
+              <mat-form-field appearance="fill">
+                <input matInput placeholder="Password" type="password" formControlName="password">
+                <mat-icon matSuffix>subdirectory_arrow_left</mat-icon>
+                <mat-hint>Enter Password here.</mat-hint>
+                <mat-error *ngFor="let error of error_messages.password">
+                  <div class="error-message"
+                      *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                      {{ error.message }}
+                  </div>
+              </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="disp-flex flex-col MT16">
+            <button mat-raised-button color="primary" class="MB16 signin-button">Sign In</button>
+            <button mat-button class="MB16 forgotpw-button ">Forgot Password</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

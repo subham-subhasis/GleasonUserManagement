@@ -1,0 +1,39 @@
+.body-container {
+    background-color: rgb(231, 231, 231);
+    //overflow: hidden;
+    height: calc(100vh - 75px);
+}
+
+.mat-toolbar.mat-primary {
+    background: #fff;
+    color: gray;
+    font-weight: 600;
+}
+
+.PL215 {
+    padding-left: 215px;
+}
+
+.logo-lg {
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgb(51, 122, 183);
+}
+
+.logo-btn {
+    height: 68px;
+    background-color: #f6f6f6;
+}
+
+.mat-sidenav-fixed {
+    position: fixed;
+    max-width: 215px !important;
+    width: 215px !important;
+}
+
+.name-sidenav {
+    flex-direction: column;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 1.6rem;
+    padding-left: 8px;
+}

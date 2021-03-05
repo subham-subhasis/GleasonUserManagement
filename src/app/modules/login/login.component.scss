@@ -1,0 +1,30 @@
+.wrapper-container {
+    background-color: rgb(247, 244, 244);
+}
+
+.example-card {
+    width: 30%;
+    //max-height: 50%;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    height: calc(100vh);
+}
+
+.login-header {
+    color: gray;
+}
+
+::ng-deep .mat-card-header-text {
+    width: 100% !important;
+}
+
+.signin-button {
+    background-color: rgb(59, 109, 247);
+    color: white !important;
+    margin-bottom: 16px !important;
+}

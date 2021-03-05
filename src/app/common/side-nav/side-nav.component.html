@@ -1,0 +1,58 @@
+<mat-sidenav-container class="main-sidenav-container" (backdropClick)="opened = !opened">
+    <mat-toolbar class="mat-elevation-z6" color="primary">
+        <div class="disp-flex jc-space-bw WD100">
+            <div class="">
+                <button mat-icon-button (click)="opened = !opened">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div class="disp-flex">
+                <button mat-icon-button (click)="toggleDarkness()">
+                    <mat-icon class="">settings</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>fullscreen</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-toolbar>
+    
+    <mat-sidenav [mode]="mode" [opened]="opened" [fixedInViewport]="true" [fixedTopGap]="0" [fixedBottomGap]="0">
+        <button mat-button (click)="opened = !opened" class="logo-btn WD100">
+            <a class="logo border-right-header flex-center-align">
+                <!-- <span class="logo-mini"><b>{{'HEADERCOMPONENT.HEADERLOGOTEXT' | translate}}</b></span> -->
+                <span class="logo-lg flex-center-align">
+                    Gleason
+                </span>
+
+              </a>
+        </button>
+        <div class="P10 flex-row">
+            <div class="PL8">
+              <img class="va-middle img-responsive" alt="login-user" height="30" width="30" 
+              src="./assets/images/user-icon.png">
+            </div>
+            <div class="pull-left">
+              <div class="fs-16 name-sidenav">Subham Panda</div>
+              <div>
+                  <mat-icon>arrow_drop_down</mat-icon>
+              </div>
+            </div>
+        </div>
+        <div class="PT2">
+            <mat-nav-list>
+                <a mat-list-item routerLink="/dashboard">
+                    <mat-icon class="MR5">dashboard</mat-icon>Dashboard</a>
+                <a mat-list-item routerLink="/userManagament">
+                    <mat-icon class="MR5">supervised_user_circle</mat-icon>User Management</a>
+              </mat-nav-list>
+        </div>
+    </mat-sidenav>
+</mat-sidenav-container>
+
+<section class="body-container" [ngClass]="{'PL215': opened, 'PL10': !opened}">
+    <router-outlet></router-outlet>
+</section>

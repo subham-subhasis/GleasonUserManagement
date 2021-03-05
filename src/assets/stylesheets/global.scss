@@ -1,0 +1,333 @@
+// @import "https://fonts.googleapis.com/css?family=Material+Icons";
+// @import url("https://fonts.googleapis.com/css?family=Inter:300,400,500,700");
+@media (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 960px) {
+    html {
+        font-size: 8px;
+    }
+}
+@media (min-width: 961px) and (max-width: 1280px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media (min-width: 1281px) and (max-width: 1920px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 1921px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+// $fs-32: 32px;
+// $fs-24: 24px;
+// $fs-16: 16px;
+// $fs-14: 14px;
+// $fs-12: 12px;
+// $fs-10: 10px;
+
+$fs-32: 3.2rem;
+$fs-24: 2.4rem;
+$fs-16: 1.6rem;
+$fs-14: 1.4rem;
+$fs-12: 1.2rem;
+$fs-10: 1rem;
+$fs-18: 1.8rem;
+$TC-1: #4d4f5c;
+$TC-2: #62b1ee;
+$TC-3: #17476b;
+$TC-4: #1b202a66;
+$TC-5: #d9593c;
+
+$BRAND-C1: #17476b;
+$BRAND-C2: #20cabd;
+
+$BGC-1: #f6f6f6;
+$BGC-2: #ffffff;
+
+.fs-10 {
+    font-size: $fs-10;
+}
+.fs-12 {
+    font-size: $fs-12;
+}
+.fs-14 {
+    font-size: $fs-14;
+}
+.fs-16 {
+    font-size: $fs-16;
+}
+.fs-24 {
+    font-size: $fs-24;
+}
+.fs-32 {
+    font-size: $fs-32;
+}
+
+.bgc-1 {
+    background: $BGC-1;
+}
+.bgc-2 {
+    background: $BGC-2;
+}
+
+.tc-1 {
+    color: $TC-1;
+}
+.tc-2 {
+    color: $TC-2;
+}
+.tc-3 {
+    color: $TC-3;
+}
+.tc-4 {
+    color: $TC-4;
+}
+.tc-5 {
+    color: $TC-5;
+}
+
+.B {
+    font-weight: 700;
+}
+.M {
+    font-weight: 500;
+}
+.S {
+    font-weight: 600;
+}
+.R {
+    font-weight: 400;
+}
+
+/*********************** padding - margin common class start ***********************/
+@for $size from 1 through 100 {
+    .WD#{$size} {
+        width: percentage($size/100);
+    }
+}
+
+.WD100 {
+    width: 100%;
+}
+
+@for $i from 0 through 100 {
+    .PT#{$i} {
+        padding-top: $i + px;
+    }
+    .PB#{$i} {
+        padding-bottom: $i + px;
+    }
+    .PL#{$i} {
+        padding-left: $i + px;
+    }
+    .PR#{$i} {
+        padding-right: $i + px;
+    }
+    .P#{$i} {
+        padding: $i + px;
+    }
+    .MT#{$i} {
+        margin-top: $i + px;
+    }
+    .MB#{$i} {
+        margin-bottom: $i + px;
+    }
+    .ML#{$i} {
+        margin-left: $i + px;
+    }
+    .MR#{$i} {
+        margin-right: $i + px;
+    }
+    .M#{$i} {
+        margin: $i + px;
+    }
+}
+
+/*********************** padding - margin common class END ***********************/
+
+/***********************  alignment class starts  ***********************/
+
+.va-middle {
+    vertical-align: middle;
+}
+.va-sub {
+    vertical-align: sub;
+}
+.ta-center {
+    text-align: center;
+}
+.ta-left {
+    text-align: left;
+}
+.ta-right {
+    text-align: right;
+}
+.jc-center {
+    justify-content: center;
+}
+.jc-flex-end {
+    justify-content: flex-end;
+}
+.jc-flex-start {
+    justify-content: flex-start;
+}
+.jc-space-bw {
+    justify-content: space-between;
+}
+.jc-unset {
+    justify-content: unset;
+}
+.md-flex-center {
+    align-items: center;
+}
+.md-flex-end {
+    align-items: flex-end;
+}
+.flex-center-align {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.flex-col {
+    @extend .disp-flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    @extend .disp-flex;
+    flex-direction: row;
+}
+.md-flex-wrap {
+    flex-wrap: wrap;
+}
+.disp-flex {
+    display: flex;
+}
+.disp-inline-block {
+    display: inline-block;
+}
+.disp-none {
+    display: none !important;
+}
+@for $i from 1 through 30 {
+    .flex-#{$i} {
+        flex: $i;
+    }
+}
+
+/***********************   alignment class END***********************/
+
+.pos-rel {
+    position: relative;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.filter-icon {
+    background: #e7ebf3 !important;
+    color: #62b1ee !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+.active-filter {
+    background: #17476b !important;
+    color: #fff !important;
+}
+
+.opacityHalf {
+    opacity: 0.5;
+    /* Add the blur effect */
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.word-break {
+    word-break: break-word !important;
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.alert-success {
+    background: rgb(167, 191, 79) !important;
+    color: white !important;
+}
+
+.alert-fail {
+    background: rgb(240, 89, 102) !important;
+    color: white !important;
+}
+
+.alert-warn {
+    background: rgb(219, 155, 60) !important;
+    color: white !important;
+}
+
+.alert-none {
+    display: none !important;
+}
+
+.tick-background {
+    background: white;
+    color: rgb(167, 191, 79);
+    border-radius: 50%;
+}
+
+.no-selection {
+    user-select: none; /* standard syntax */
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+.top-24 {
+    top: -24px;
+}
+
+.content-disabled {
+    pointer-events: none;
+    opacity: 0.6;
+    filter: alpha(opacity=50);
+    zoom: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+}
+
+.disabled {
+    pointer-events: none;
+    color: #ccc !important;
+}

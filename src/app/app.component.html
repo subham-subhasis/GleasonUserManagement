@@ -1,0 +1,7 @@
+<section *ngIf="userLoginSuccessful"> <!--userLoginSuccessful-->
+    <app-login (loginSuccessfulEvent)="signInCheck($event)"></app-login>
+</section>
+
+<section *ngIf="!userLoginSuccessful">
+    <app-side-nav></app-side-nav>
+</section>

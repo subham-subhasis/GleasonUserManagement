@@ -1,0 +1,107 @@
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing.dark-backdrop {
+      opacity: 0.75 !important;
+}
+@import "./global.scss";
+
+html,
+body {
+      height: 100%;
+}
+body {
+      margin: 0;
+      font-family: Inter;
+}
+table {
+      width: 100%;
+      border: 1px solid rgba(77, 79, 92, 0.12);
+}
+
+.close-icon {
+      transition: 500ms ease-in-out;
+      right: -10px;
+      top: -10px;
+  }
+  
+  .close-icon:hover {
+      transform: rotate(90deg);
+  }
+  
+  ::ng-deep .icon-outside .close-button {
+      float: right;
+      top: -52px;
+      right: -52px;
+  }
+  
+  ::ng-deep .icon-outside .mat-dialog-container {
+      overflow: unset;
+  }
+  
+  ::ng-deep .type-dropdown .mat-form-field-wrapper {
+      padding-bottom: 0px !important;
+  }
+  
+  ::ng-deep .type-dropdown .mat-form-field-outline {
+      height: 38px !important;;
+  }
+  
+  ::ng-deep .type-dropdown .mat-form-field-flex {
+      padding: 0px 0.75em 0px 1.1em !important;
+      margin-top: -0.25em;
+      position: relative;
+  }
+  
+  ::ng-deep .type-dropdown .mat-form-field-label.mat-empty.mat-form-field-empty{
+      transform: translateY(-1em) scale(1);
+  }
+  
+  ::ng-deep .type-dropdown .mat-select-arrow-wrapper {
+      transform: translateY(-10%) !important;
+  }
+  ::ng-deep .type-dropdown .mat-form-field-infix {
+      padding: 0 !important;
+  }
+  ::ng-deep .type-dropdown .mat-select-value {
+      transform: translateY(-15%) !important;
+  }
+
+  //materila override for whole Application
+.mat-form-field {
+    font-size: 1.4rem !important;
+    line-height: 1.125!important;
+    width: 100%!important;
+  }
+  .mat-form-field-infix {
+    padding: 0.5em 0;
+    border-top: 0.84375em solid transparent;
+  }
+  .mat-form-field-underline  {
+    background-color: rgba(0, 0, 0, 0.02) !important;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-infix {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15) !important;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: 0.4375em 0;
+  }
+  .mat-form-field-label {
+    color: #4D4F5C !important;
+    font-size: 1.4rem !important;
+    font-weight: 500;
+  }
+  .mat-card {
+    border-radius:10px !important;
+  }
+  .mat-card-header-text {
+    margin: 0px !important;
+  }
+  .mat-input-element::placeholder {
+    font-size: 1.2rem !important;
+  }
+  .mat-card-title {
+    font-size: 1.8rem !important;
+    font-weight: 600;
+    color: rgb(23, 71, 107);
+  }
+  .mat-card-subtitle {
+    color: rgb(79, 78, 78) !important;
+  }
